@@ -9,7 +9,7 @@ class ServerHandler(http.server.BaseHTTPRequestHandler):
         REQUESTS.inc()
         self.send_response(200)
         self.end_headers()
-
+        self.wfile.write("KOCSISTEM")
 if __name__ == "__main__":
     server = http.server.HTTPServer(('', 8080), ServerHandler)
     server.serve_forever()
