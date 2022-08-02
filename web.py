@@ -2,7 +2,7 @@ import http.server
 from prometheus_client import start_http_server
 from prometheus_client import Counter
 
-REQUESTS = Counter('server_requests_total', 'Total number of requests to this webserver')
+REQUESTS = Counter('server_requests', 'Total number of requests to this webserver')
 
 class ServerHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
